@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    background: linear-gradient(96deg, rgba(251, 250, 248, 1) 50%, rgba(250, 116, 89, 1) 90%);
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.navbar {
+    font-weight: bold;
+    font-size: large;
+    margin-right: 2em;
+    z-index: 9999;
+}
+
+.nav-link {
+    color: #fa7459;
+}
+
+.container-fluid {
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.navbar li:hover {
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.carousel-caption {
+    border: 2px solid #fa7459;
+    border-radius: 1em;
+    width: 70%;
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.23);
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+.carousel-caption h5 {
+    font-size: 2rem;
+    line-height: 2em;
+}
+
+.carousel-caption p {
+    text-align: justify;
+    letter-spacing: .1em;
+}
+
+#progress {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 70px;
+    width: 70px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#progress-value {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 1.7rem;
+    color: #001a2e;
+}
+
+#second {
+    background-image: url("/assets/image/metal-texture-with-dust-scratches-cracks-textured-backgrounds.jpg");
+    background-size: cover;
+    border-top: 1px solid black;
+}
+
+.card {
+    height: 30em;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card-img {
+    height: 100%;
+}
+
+.card-body {
+    height: 25%;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fa7459;
+    transition: .5s;
+}
+
+.card-title {
+    font-family: 'Castoro Titling', cursive;
+    margin: .5em;
+    font-size: 2rem;
+}
+
+.card-text {
+    font-family: 'Castoro Titling', cursive;
+    margin: .3em;
+    font-size: 1rem;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.card:hover .card-body {
+    cursor: pointer;
+    height: 40%;
+    bottom: 0%;
+    background: black;
+}
+
+.card:hover .card-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+.card:hover img {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    padding: 3em;
+}
+
+.container {
+    width: 90%;
+}
+
+.box {
+    width: 50%;
+    padding: 2em;
+}
+
+.box h2,
+p {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+}
+
+footer {
+    background-color: #fa7459;
+    border-top: 1px solid black;
+}
+
+footer .btn {
+    color: #fa7459;
+    border: 1px solid #fa7459;
+}
+
+@media (max-width:800px) {
+    .card {
+        height: 23em;
+    }
+}
+
+@media (max-width:550px) {
+    .card {
+        height: 22em;
+    }
+    .card:hover .card-body {
+        height: 70%;
+    }
+    .box {
+        width: 100%;
+    }
+    .carousel-caption {
+        width: 70%;
+        height: 50%;
+    }
+    .carousel-caption h5 {
+        font-size: .7rem;
+        line-height: .3em;
+    }
+    .carousel-caption p {
+        text-align: justify;
+        letter-spacing: 0.1px;
+        font-size: .5rem;
+    }
+}
+
+@media (max-width: 999px) and (min-width: 551px) {
+    .card {
+        height: 22em;
+    }
+    .card:hover .card-body {
+        height: 70%;
+    }
+    .box {
+        width: 80%;
+    }
+    .carousel-caption {
+        width: 70%;
+    }
+    .carousel-caption h5 {
+        font-size: 2rem;
+        line-height: .8em;
+    }
+    .carousel-caption p {
+        text-align: justify;
+        letter-spacing: 0.1px;
+        font-size: .8rem;
+    }
+}
